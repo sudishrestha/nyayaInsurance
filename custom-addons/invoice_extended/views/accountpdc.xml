@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+
+<data>
+
+
+<record model="ir.ui.view" id="print_number_view_form">
+
+<field name="name">Send data</field>
+
+<field name="model">account.move</field>
+
+<field name="inherit_id" ref="account.view_move_form"/>
+
+
+<field name="arch" type="xml">
+
+
+<xpath position="inside" expr="/form/*">
+
+<button name="create_insurance" type="object" string="Claim Insurance"/>
+
+
+
+</xpath>
+
+
+
+</field>
+
+</record>
+
+</data>
+
+</odoo>
+
