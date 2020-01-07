@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- for list tree view -->
+<record id="view_tree_insurance" model="ir.ui.view">
+	<field name="name">Insurance List</field>
+	<field name="model">insurance.task</field>
+	<field name="arch" type="xml">
+	<tree>
+		<field name="name"></field>
+		<field name="claim_amount"></field>
+		<field name="claim_type"></field>
+		<field name="address"></field>
+		<field name="date_of_claim"></field>
+		<field name="is_approved"/>
+	</tree>
+	</field>
+</record>
+<!-- for search view -->
+
+<record id="view_search_insurance" model="ir.ui.view">
+	<field name="name">Insurance Filters</field>
+	<field name="model">insurance.task</field>
+	<field name="arch" type="xml">
+	<search>
+		<field name="name"></field>
+		<field name="claim_amount"></field>
+		<field name="claim_type"></field>
+		<field name="address"></field>
+		<field name="date_of_claim"></field>
+		<filter name="filter_inactive"
+		      string="Approved"
+		      domain="[('is_approved','=',True)]"/>
+		<filter name="filter_active"
+		      string="Not Approved"
+		      domain="[('is_approved','=',False)]"/>
+	</search>
+	</field>
+</record>
+
+
+<!-- For form view-->
+	<record id="view_form_insurance_task" model="ir.ui.view">
+		<field name="name">Insurance form</field>
+		<field name="model">insurance.task</field>
+		<field name="arch" type="xml">
+		<form string="Insurance Task">
+			<sheet>
+				<group name="group_top">
+					<group name="group_left">
+						<field name="name"></field>
+						<field name="age"></field>
+						<field name="claim_amount"></field>
+						<field name="claim_type"></field>
+					</group>
+
+					<group name="group_right">
+
+						<field name="address"></field>
+						<field name="date_of_claim"></field>
+						<field name="is_approved"/>
+					</group>
+					<field name="remarks"></field>
+					
+				</group>
+			</sheet>
+		</form>
+		</field>
+	</record>
+
+
+
+
+</odoo>
