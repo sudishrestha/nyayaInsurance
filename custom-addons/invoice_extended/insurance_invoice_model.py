@@ -10,6 +10,10 @@ class InsuranceInvoiceTask(models.Model):
 		recoo = []
 		inv_obj = self.env['insurance.task']
 		for rec in self:
+
+			city=rec.partner_id.city
+			if rec.partner_id.city == False:
+				city = "kathmandu"
 			if rec.state != 'posted':
 				raise ValidationError("You cannnot claim for Insurance before posting invoice."  )
 			elif rec.amount_total <= 0:
@@ -22,7 +26,7 @@ class InsuranceInvoiceTask(models.Model):
 				inc = inv_obj.create({
 				'name': rec.partner_id.name,
 				'age': '0',
-				'address': rec.partner_id.city,
+				'address': city,
 				'claim_amount':rec.amount_total,
 				'date_of_claim':rec.invoice_date,
 				'is_approved':False,
@@ -31,4 +35,3 @@ class InsuranceInvoiceTask(models.Model):
 				
 				})
 		return inc
-
