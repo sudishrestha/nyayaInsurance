@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <odoo>
     <act_window id="action_insurance_task"
-      name="Insurance"
+      name="Bima"
       res_model="insurance.task"
       view_mode="tree,form"
 	/>
 
     <menuitem id="menu_insurance_task"
-              name="Insurance"
+              name="Bima"
 	      action="action_insurance_task" />
 
 </odoo>

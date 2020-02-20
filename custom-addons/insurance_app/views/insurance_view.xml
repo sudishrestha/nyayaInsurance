@@ -2,7 +2,7 @@
 <odoo>
 <!-- for list tree view -->
 <record id="view_tree_insurance" model="ir.ui.view">
-	<field name="name">Insurance List</field>
+	<field name="name">Bima List</field>
 	<field name="model">insurance.task</field>
 	<field name="arch" type="xml">
 	<tree>
@@ -18,7 +18,7 @@
 <!-- for search view -->
 
 <record id="view_search_insurance" model="ir.ui.view">
-	<field name="name">Insurance Filters</field>
+	<field name="name">Bima Filters</field>
 	<field name="model">insurance.task</field>
 	<field name="arch" type="xml">
 	<search>
@@ -40,7 +40,7 @@
 
 <!-- For form view-->
 	<record id="view_form_insurance_task" model="ir.ui.view">
-		<field name="name">Insurance form</field>
+		<field name="name">Bima form</field>
 		<field name="model">insurance.task</field>
 		<field name="arch" type="xml">
 		<form string="Insurance Task">
