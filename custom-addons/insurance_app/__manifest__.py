@@ -1,5 +1,5 @@
 {
-'name':'Insurance Claims',
+'name':'Bima',
 'description':'Manage insurance claims',
 'author':'Sudishrestha',
 'depends':['base'],
